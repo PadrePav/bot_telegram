@@ -1,4 +1,4 @@
-const data = require('./dataBase.js')
+const { users } = require('./dataBase.js')
 
 class IndigoGame {
     #ranks;
@@ -6,7 +6,6 @@ class IndigoGame {
     #scorePointsCards;
 
   constructor() {
-
     this.#ranks = ["K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2", "A"];
     this.#suits = ["♣", "♦", "♥", "♠"];
     this.#scorePointsCards = ["A", "1", "J", "Q", "K"];
@@ -48,6 +47,8 @@ class IndigoGame {
 
 }
 
-const user = data.users['user323']
-console.log(new IndigoGame().createStartingPosition(user))
-console.log(user)
+module.exports = IndigoGame;
+
+// const user = users['562317167']
+// console.log(new IndigoGame().createStartingPosition(user))
+// console.log(user)
